@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LanguageHelper : MonoBehaviour {
+public class LanguageHelper {
 
 	/// <summary>
 	/// Helps to convert Unity's Application.systemLanguage to a 

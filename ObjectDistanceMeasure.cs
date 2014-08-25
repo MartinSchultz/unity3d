@@ -13,8 +13,10 @@ public class ObjectDistanceMeasure : EditorWindow {
 	}
 
 	void OnGUI () {
-		object1 = (GameObject)EditorGUILayout.ObjectField(object1, typeof(GameObject), true);
-		object2 = (GameObject)EditorGUILayout.ObjectField(object2, typeof(GameObject), true);
+		if (null != Selection.objects && Selection.objects.Length > 1) {
+			object1 = (GameObject)Selection.objects[0];
+			object2 = (GameObject)Selection.objects[1];
+		}
 
 		float distance3D = 0f;
 		float distance2D = 0f;
@@ -27,6 +29,12 @@ public class ObjectDistanceMeasure : EditorWindow {
 		}
 		GUILayout.Label ("3D Distance: " + distance3D);
 		GUILayout.Label ("2D Distance: " + distance2D);
+	}
+
+	public void Update()
+	{
+		// This is necessary to make the framerate normal for the editor window.
+		Repaint();
 	}
 
 }
