@@ -23,7 +23,7 @@ public class LanguageHelper {
 			case SystemLanguage.Chinese: res = "ZH"; break;
 			case SystemLanguage.Czech: res = "CS"; break;
 			case SystemLanguage.Danish: res = "DA"; break;
-			case SystemLanguage.Dutch: res = "DA"; break;
+			case SystemLanguage.Dutch: res = "NL"; break;
 			case SystemLanguage.English: res = "EN"; break;
 			case SystemLanguage.Estonian: res = "ET"; break;
 			case SystemLanguage.Faroese: res = "FO"; break;
